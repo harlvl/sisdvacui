@@ -1,0 +1,45 @@
+<div class="inner-container">
+<div class="row" >
+    <div class="col-md-12" [ngSwitch]="errorCode">
+        <div class="error-template" *ngSwitchCase="401">
+            <div class="alert alert-danger custom-danger-alert" role="alert">
+                <img src="./src/assets/images/icons/icon_x_alert.png" alt="">
+                <span><b>Token expirado.</b> Por favor inicie sesión nuevamente</span>
+            </div>
+            <div class="error-message-box">
+                <h2>Oops!</h2>
+                <h2>Ocurrió un error {{ errorCode }}.</h2>
+            </div>
+            <div class="error-detail-box">
+                <div class="error-details">
+                    <span>Usted no tiene acceso a esta página. Por favor inicie sesión con un usuario diferente.</span>
+                </div>  
+            </div>
+            <div class="error-actions">
+                <button (click)="redirect()" class="btn redirect-btn">Regresar al inicio</button>
+            </div>
+        </div>
+        <div class="error-template" *ngSwitchCase="300">
+            <h1>Sesión finalizada!</h1>
+            <div class="error-details">
+               <span>Puede cerrar esta ventana.</span>
+            </div>
+        </div>
+        <div class="error-template" *ngSwitchDefault>
+            <div class="error-message-box">
+                <h2>Oops!</h2>
+                <h2>Ocurrió un error {{ errorCode }}.</h2>
+            </div>
+            <div class="error-detail-box">
+                <div class="error-details">
+                    <span>Sucedió un error al procesar su operación.</span>
+                    <span><b>Respuesta del servidor: </b> {{ message }}</span>
+                </div>  
+            </div>
+            <div class="error-actions">
+                <button (click)="redirect()" class="btn redirect-btn">Regresar al inicio</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

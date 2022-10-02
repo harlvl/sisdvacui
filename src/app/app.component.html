@@ -1,0 +1,61 @@
+<div class="container main-container">
+  <div class="body">
+    <nav class="navbar navbar-expand-sm navbar-light bg-white login-nav">
+      <a class="navbar-brand" [routerLink]="['/']">
+<!--        <img src="../assets/images/sisdvac-logo.svg" alt="">-->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav" *ngIf="currentUser">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle username-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="https://i.pinimg.com/originals/47/1a/1a/471a1ad342659289433e05a611d206f8.png" width="40"
+                height="40" class="rounded-circle">
+              <span class="nav-username">{{ currentUser.username}}</span>
+              <fa-icon [icon]="faAngleDown"></fa-icon>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" (click)="logout()">logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-sm bg-white hover-menu custom-nav">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto top-nav mt-2 mt-lg-0 navbar-menu">
+          <li class="nav-item navbar-li-large">
+            <a class="nav-link custom-nav-link" [routerLinkActive]="['active']" [routerLink]="['profile']">Perfil</a>
+          </li>
+          <li class="nav-item navbar-li-large">
+            <a class="nav-link custom-nav-link" [routerLinkActive]="['active']" [routerLink]="['preclinical-study']">Estudios preclínicos</a>
+          </li>
+          <li class="nav-item navbar-li-large">
+            <a class="nav-link custom-nav-link" [routerLinkActive]="['active']" [routerLink]="['clinical-study']">Estudios clínicos</a>
+          </li>
+          <li class="nav-item navbar-li-large">
+            <a class="nav-link custom-nav-link" [routerLinkActive]="['active']" [routerLink]="['metrics']">Indicadores</a>
+          </li>
+          <li class="nav-item navbar-li-large">
+            <a class="nav-link custom-nav-link">Farmacovigilancia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <router-outlet></router-outlet>
+
+      <!-- loading spinner -->
+      <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+        <p style="color: white">Loading.</p>
+      </ngx-spinner>
+    </div>
+  </div>
+</div>

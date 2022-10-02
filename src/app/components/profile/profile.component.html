@@ -1,0 +1,36 @@
+<div class="default-inner-container">
+    <span class="title-layout">Perfil de usuario</span>
+    <div class="main-container custom-row">
+        <div class="col-sm-8 custom-col draft-col">
+            <div class="card custom-card">
+                <div class="card-header">
+                    <div class="custom-row">
+                        <div class="col-sm-8">
+                            <h5 class="card-title">Dr. Juan Perez</h5>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn btn-go-draft">Doctor Principal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="custom-text mr-4 mb-3">Datos del usuario</span><img class="point-edit" src="assets/images/icons/edit-solid.svg" height="16px">
+                    <div class="col-sm-12">
+                        <div class="custom-row jurisdiction-detail">
+                            <div class="col-4 mt-2">Nombre</div>
+                            <div class="col-6 mt-2"><b>{{currentUser.name + ' ' + currentUser.lastname}}</b></div>
+                        </div>
+                        <div class="custom-row jurisdiction-detail">
+                            <div class="col-4 mt-2">Perfil</div>
+                            <div class="col-6 mt-2"><b>{{currentUser.role}}</b></div>
+                        </div>
+                        <div class="custom-row jurisdiction-detail">
+                            <div class="col-4 mt-2">Entidad Investigadora</div>
+                            <div class="col-6 mt-2"><b>{{currentUser.researchEntity}}</b></div>
+                        </div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

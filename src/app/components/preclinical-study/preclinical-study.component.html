@@ -1,0 +1,40 @@
+<div class="default-inner-container">
+    <span class="title-layout">Panel de monitoreo</span>
+    <div class="common-kcs">
+        <button class="btn btn-new-kcs" data-toggle="modal" data-target="#createTrialModal" type="button" [style.cursor]="'pointer'"><img src="./assets/images/icons/plus.svg" alt=""> <span>Nuevo Estudio</span></button>
+    </div>
+
+    <div class="col-sm-12 preclinical-secondary-container mt-4" >
+        <div class="col-sm-12 title-results-search">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8"> <span class="activity-table-title">Estudios activos: {{ trialsFirst.length}} </span> </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-row mt-2 mb-2">
+            <div class="col-sm-12 p-0">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-sm-12" *ngFor="let trial of trialsFirst">
+                            <div class="custom-row trial-header">
+                                <div class="col-sm-4"><b>{{trial.title}}</b></div>
+                                <div class="col-sm-2"><b>Infección N</b></div>
+                                <div class="col-sm-3"><b>{{trial.numberINS}}</b></div>
+                                <div class="col-sm-3"><b>{{'Inició: ' + trial.startDate}}</b></div>
+                            </div>
+                            <div class="custom-row jurisdiction-detail mt-3" *ngFor="let advance of trial.advances">
+                                <ng-container >
+                                    <div class="col-sm-5 mb-1">{{'Avance: '+ advance.startDate}}</div>
+                                    <div class="col-sm-6 mb-1">{{advance.subjectsCompleted + ' sujetos lo completaron'}}</div>
+                                    <div class="col-sm-1 mb-1"><img (click)="checkAdvance()" class="point-edit" src="assets/images/icons/forms_search.svg"/></div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-create-trial></app-create-trial>
+</div>

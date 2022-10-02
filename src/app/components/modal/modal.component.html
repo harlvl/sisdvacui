@@ -1,0 +1,12 @@
+<div class="modal-body">
+    <div class="modal-info">
+        <span *ngIf="alertType==1" class="session-text">Su sesión está por expirar, por favor elija una de las opciones debajo</span>
+        <span *ngIf="alertType==2" class="session-text">Detectamos inactividad en su sesión, por favor elija una de las opciones debajo</span>
+        <span class="countdown">Su sesión se cerrará en: </span>
+        <countdown class="countdown" #countdown [config]="{ leftTime: 180, format: 'mm:ss' }"  (event)="onTimerFinished($event)"></countdown>
+    </div>
+    <div class="modal-footer custom-modal-footer no-border">
+        <button type="button" class="btn btn-continue"(click)="continue()">Continuar trabajando</button>
+        <button type="button" class="btn btn-logoff" (click)="logout()">Cerrar sesión</button>
+    </div>
+</div>

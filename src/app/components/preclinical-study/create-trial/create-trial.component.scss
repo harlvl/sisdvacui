@@ -1,0 +1,71 @@
+@import '../../../../styles/mixins';
+
+.modal-content-create-kcs {
+  min-height: 662px;
+  max-height: 700px;
+  width: 487px;
+
+  .modal-close-custom {
+    width: 33px;
+    height: 33px;
+    outline: none !important;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 19px 22px 0 0;
+  }
+
+  .modal-body-create-kcs {
+    margin: 14px 18px 0 18px;
+
+    .modal-title {
+      @include regular-font-style($fontSize: 21px, $color: $black-primary);
+      padding-bottom: 25px;
+    }
+
+    .card-body {
+      overflow-y: auto;
+      max-height: 500px;
+      text-align: left;
+
+      .form-group {
+        .kcs-label {
+          margin-left: 16px;
+          text-align: left;
+          margin-bottom: 5px;
+          @include regular-font-style($color: $black-primary);
+        }
+
+        textarea {
+          resize: none;
+        }
+
+        textarea::placeholder {
+          color:#9B9B9D;
+        }
+
+        input::placeholder {
+          color:#9B9B9D;
+        }
+      }
+    }
+
+    .modal-footer {
+      .create-kcs-confirmation {
+        @include btn-regular-style($color: #FFFFFF, $backgroundColor: $blue-primary);
+        font-weight: 500;
+        border: 1px solid $blue-primary;
+      }
+
+      .cancel-create-kcs {
+        @include btn-regular-style;
+        font-weight: 500;
+        border: 1px solid $blue-primary;
+      }
+
+      button {
+        height: 40px;
+        width: 105px;
+      }
+    }
+  }
+}

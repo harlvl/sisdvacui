@@ -1,0 +1,34 @@
+@import '../../../styles/mixins';
+
+.modal-info {
+    margin-top: 20px; 
+    
+    .session-text {
+        @include regular-font-style($fontSize: 16px, $color: $black-primary);
+    }
+
+    .countdown {
+        margin-top: 5px;
+        @include regular-font-style($fontSize: 14px, $color: $black-primary);
+        font-weight: 700;
+    }
+}
+
+.modal-footer {
+    .btn-continue {
+        @include btn-regular-style($color: #FFFFFF, $backgroundColor: $blue-primary);
+        font-weight: 500;
+        border: 1px solid $blue-primary;
+    }
+    
+    .btn-logoff {
+        @include btn-regular-style;
+        font-weight: 500;
+        border: 1px solid $blue-primary;
+    }
+}
+
+button {
+    height: 40px;
+    width: 150px;
+}

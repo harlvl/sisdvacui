@@ -1,0 +1,16 @@
+@import '../../../../styles/mixins';
+
+.invalidField {
+  ::ng-deep .multiselect-dropdown {
+      background-color: #fdeaec;
+      border: 1px solid #A90F14;
+      border-radius: 6px;
+      display: block;
+      .dropdown-btn {
+          border: none !important;
+      }
+  }
+}
+
+::ng-deep .multiselect-dropdown .dropdown-btn {width: -webkit-fill-available !important}
+::ng-deep .multiselect-dropdown .dropdown-btn:focus {outline: none !important}

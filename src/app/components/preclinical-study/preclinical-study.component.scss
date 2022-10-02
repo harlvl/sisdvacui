@@ -1,0 +1,310 @@
+@import '../../../styles/mixins';
+
+.title-results-search {
+  height: 57px;
+  display: flex;
+  align-items: center;
+
+  .activity-table-title {
+    @include regular-font-style($fontSize: 18px, $color: $black-primary);
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+}
+
+.main-ds-table-container {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #FFFFFF !important;
+}
+
+.data-results-search {
+  margin-top: 22px;
+}
+
+.delete-ds-modal-body {
+  text-align: center;
+  padding: 0.5rem 1rem;
+
+  span {
+    display: block;
+  }
+
+  .modal-title {
+    @include regular-font-style($fontSize: 24px, $color: $black-primary);
+  }
+
+  .modal-text {
+    margin-top: 20px;
+    @include regular-font-style($fontSize: 16px, $color: $black-primary);
+  }
+}
+
+.custom-modal-body-remove {
+  @include regular-font-style($fontSize: 15px, $color: $black-primary);
+  text-align: left;
+  padding: 0px 43px;
+}
+
+.btn-create-ds {
+  @include btn-regular-style($color: white, $backgroundColor: $blue-primary);
+  font-weight: 700;
+  width: 40%;
+  height: 40px;
+  border-style: 1px solid;
+}
+
+.btn-cancel-delete-ds {
+  @include btn-regular-style($backgroundColor: white);
+  font-weight: 700;
+  width: 40%;
+  height: 40px;
+  border: 1px solid $blue-primary;
+  margin-left: 15px;
+}
+
+.edit-ds-subtext-missing-parameters-warning{
+  @include regular-font-style($fontSize: 14px, $color: #A90F14);
+  font-weight: 400;
+  text-align: left;
+  margin-top: -20px;
+  margin-left: 75%;
+}
+
+.edit-ds-btn-save {
+  @include btn-regular-style($color: white, $backgroundColor: $blue-primary);
+  font-weight: 700;
+  width: 20%;
+  height: 40px;
+  border: 1px solid $blue-primary;
+}
+
+.edit-ds-btn-edit-cancel {
+  @include btn-regular-style;
+  font-weight: 700;
+  height: 40px;
+  width: 20%;
+  margin-left: 20px;
+  border: 1px solid $blue-primary;
+}
+
+.edit-ds-btn-edit-delete{
+  @include btn-regular-style;
+  font-weight: 700;
+  height: 40px;
+  width: 30%;
+  border: 1px solid $blue-primary;
+}
+
+.edit-ds-add-uri-link {
+  @include regular-font-style($fontSize: 14px, $color: $blue-primary);
+  cursor: pointer;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.main-edit-label {
+  @include regular-font-style($fontSize: 20px, $color: $black-primary);
+  font-weight: 700;
+}
+
+.card-body {
+  @include regular-font-style($fontSize: 16px, $color: $black-primary);
+}
+
+.jurisdiction-detail {
+  @include regular-font-style($fontSize: 15px, $color: $black-primary);
+  background-color: #F4FBFF;
+}
+
+.trial-header {
+  border-bottom: 2px solid #37474F !important;
+}
+
+//.bg-success {
+//  background: linear-gradient(to bottom, #639fcc, #286593);
+//  background: -prefix-linear-gradient(top, #639fcc, #286593);
+//}
+
+.edit-ds-jurisdiction-detail {
+  background-color: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  width: 98% !important;
+  margin: 5px 0 10px 10px !important;
+}
+
+.edit-ds-missing-parameters-warning-info {
+  @include regular-font-style($fontSize: 18px, $color: $black-primary);
+  border-radius: 3px;
+  padding: 10px 20px;
+
+  .main-info {
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .secondary-info {
+    margin-left: 14px;
+    font-size: 14px;
+  }
+}
+
+.edit-ds-missing-parameters-warning {
+  background-color: #FDEAEC;
+  border: 1px solid #A90F14;
+}
+
+.ds-cell-standard-set-margin {
+  margin-bottom: 5px !important;
+}
+
+.ds-cell-content {
+  @include regular-font-style($fontSize: 14px, $color: #00000099);
+  height: 46px !important;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  align-items: center !important;
+}
+
+.bg-success {
+  background-color: #E7F6E5 !important;
+}
+
+.ds-updated-main-info {
+  img {
+    margin-right: 10px;
+  }
+}
+
+.ds-updated-secondary-info {
+  margin-left: 15px;
+  font-size: 14px;
+}
+.ds-updated-success {
+  @include regular-font-style($fontSize: 18px, $color: $black-primary);
+  border-radius: 3px;
+  padding: 10px 20px;
+
+  background-color: #E7F6E5;
+  border: 1px solid #27B610;
+
+  margin-bottom: 10px !important;
+}
+
+.ds-cell-content-ss-info {
+  //padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  //margin-top: 10px !important;
+}
+
+.ds-table-secondary-container {
+  margin-top: 16px;
+  min-height: 100px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.ds-table-header {
+  @include regular-font-style($fontSize: 16px, $color: #00000099);
+  border-bottom: 2px solid #37474F !important;
+  height: 42px !important;
+  vertical-align: center !important;
+  .ds-table-subject-header {
+    padding-left: 32px !important;
+  }
+
+  .ds-table-edit-header {
+    padding-right: 16px !important;
+  }
+}
+
+.ds-table-subject-content {
+  padding-left: 32px !important;
+}
+
+.ds-table-edit-content {
+  padding-right: 16px !important;
+}
+
+.ds-table-secondary-container {
+  margin-top: 16px;
+  min-height: 100px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.pagination {
+  margin-top: 20px;
+  font-family: 'Lato';
+  ::ng-deep .pagination-next, ::ng-deep .pagination-previous {
+    font-weight: bold !important;
+  }
+}
+
+.empty-results-card {
+  height: 85px;
+  margin-top: 20px;
+  justify-content: left;
+  background-color: #FFFFFF;
+
+  .empty-results-text {
+    @include regular-font-style($fontSize: 20px, $color:  $black-primary );
+    font-weight: 700;
+    margin-left: 20px;
+  }
+}
+
+.point-edit {
+  cursor: pointer;
+}
+
+
+.dsTableOdd {
+  background-color: white;
+}
+
+.dsTableEven {
+  background-color: #F4FBFF;
+}
+
+.preclinical-secondary-container {
+  margin-top: 16px;
+  min-height: 100px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.common-kcs {
+  float: right;
+  .btn-view-ss, .btn-new-kcs {
+    @include btn-regular-style($backgroundColor: #FFFFFF);
+    font-weight: 700;
+    height: 40px;
+    border: 1px solid $blue-primary;
+  }
+
+  .btn-view-ss {
+    min-width: 200px;
+    width: 243px;
+  }
+
+  .btn-new-kcs {
+    margin-left: 20px;
+    min-width: 120px;
+    width: 169px;
+  }
+
+  button > img,
+  button > span {
+    vertical-align: middle;
+  }
+
+  img {
+    margin-right: 10px;
+  }
+
+}

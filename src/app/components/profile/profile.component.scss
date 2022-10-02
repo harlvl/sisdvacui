@@ -1,0 +1,205 @@
+@import '../../../styles/mixins';
+
+.card-body {
+  padding: 15px 35px !important;
+}
+
+.card-title {
+  @include regular-font-style (30px, $black-primary);
+  font-weight: 400 !important;
+}
+
+.card-header {
+  background-color: white !important;
+  padding: 20px 30px;
+
+}
+
+.custom-card {
+  height: 283px !important;
+  vertical-align: middle !important;
+}
+
+.btn-go-draft {
+  @include btn-regular-style($color: #FFFFFF, $backgroundColor: $blue-primary);
+  font-weight: 700;
+  width: 140px;
+  height: 40px;
+  border-style: 1px solid;
+}
+
+.btn-go-live {
+  @include btn-regular-style;
+  font-weight: 700;
+  width: 105px;
+  height: 40px;
+  border: 1px solid $blue-primary;
+}
+
+.custom-text {
+  @include regular-font-style($fontSize: 16px, $color: $black-primary);
+  display: inline-block;
+  font-weight: 700;
+
+}
+
+.btn-custom {
+  font-family: $primaryFontFamily;
+  color: $blue-primary;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border:none;
+  padding: 1px 0px !important;
+
+  span {
+    margin-left: 5px;
+  }
+
+  img {
+
+  }
+}
+
+.draft-col {
+  padding-right: 25px !important;
+}
+
+.live-col {
+  padding-left: 25px !important;
+}
+
+.custom-modal-footer {
+  margin-top: 20px !important;
+}
+
+.modal-title {
+  img {
+    margin-right: 10px;
+  }
+}
+
+.missing-parameters-warning-container {
+  margin-bottom: 5px !important;
+  margin-top: -10px !important;
+}
+
+.message-for-publish {
+  @include regular-font-style($fontSize: 16px, $color: $black-primary);
+  background-color: #E0F4FF;
+  border: 1px solid #0093E8;
+  padding-left: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  margin: -10px 10px 10px 10px !important;
+
+  .btn-close-message {
+    @include btn-regular-style($color: #FFFFFF, $backgroundColor: $blue-primary);
+    font-weight: 700;
+    width: 50%;
+    border-style: 1px solid;
+    height: 32px;
+    margin:auto;
+  }
+}
+
+.empty-results-card {
+  height: 55px;
+  justify-content: left;
+  background-color: #FFFFFF;
+  padding: 15px 0px !important;
+
+  .empty-results-text {
+    @include regular-font-style($fontSize: 18px, $color:  $black-primary );
+    font-weight: 700;
+    display:contents;
+  }
+}
+
+.card-body-course {
+  @include regular-font-style($fontSize: 16px, $color: $black-primary);
+  padding: 15px 20px !important;
+
+  .jurisdiction-detail {
+    @include regular-font-style($fontSize: 15px, $color: $black-primary);
+    background-color: #F4FBFF;
+  }
+}
+
+.enter-ds-table-container {
+  padding-right: 24px !important;
+  .search-section {
+    .btn-view-dst {
+      @include btn-regular-style($backgroundColor: #FFFFFF);
+      font-weight: 700;
+      height: 40px;
+      border: 1px solid $blue-primary;
+    }
+
+    .btn-view-dst {
+      min-width: 90px;
+      width: 180px;
+    }
+  }
+
+}
+
+.point-edit {
+  cursor: pointer;
+}
+
+.main-container-new-courses {
+  margin-top: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display:flexbox;
+  background-color: white;
+}
+
+.data-results-courses {
+  margin-top: 11px;
+  margin-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-nc-table-container {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #FFFFFF !important;
+}
+
+.nc-cell-content {
+  @include regular-font-style($fontSize: 16px, $color: #00000099);
+  height: 46px !important;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  align-items: center !important;
+}
+
+.nc-table-header {
+  @include regular-font-style($fontSize: 16px, $color: #00000099);
+  background-color: #F4FBFF;
+  height: 42px !important;
+  vertical-align: center !important;
+  .nc-table-subject-header {
+    padding-left: 32px !important;
+  }
+
+  .nc-table-edit-header {
+    padding-right: 16px !important;
+  }
+}
+.nc-table-subject-content {
+  padding-left: 32px !important;
+}
+
+.ncTableOdd {
+  background-color: white;
+}
+
+.ncTableEven {
+  background-color: #F4FBFF;
+}
+

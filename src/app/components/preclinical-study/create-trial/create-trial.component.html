@@ -1,0 +1,68 @@
+<!-- Modal -->
+<div class="modal fade" id="createTrialModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-create-kcs">
+            <div class="modal-header no-border">
+                <button type="button" class="close modal-close-custom" #closeModal data-dismiss="modal" aria-label="Close">
+                    <img src="assets/images/icons/close_x.svg">
+                </button>
+            </div>
+
+            <div class="modal-body no-border modal-body-create-kcs">
+                <span class="modal-title">Crear nuevo estudio</span>
+                <form [formGroup]="createTrialForm" (ngSubmit)="submitCreateTrial.focus();onSubmit()" novalidate>
+                    <div class="card-body">
+
+                        <div class="form-group custom-form">
+                            <label class="kcs-label">Número INS</label>
+                            <div class="control">
+                                <input type="text" class="form-control ng-pending" formControlName="insNumber" placeholder="ex. 123123123">
+                            </div>
+                            <div *ngIf="form.insNumber.invalid && form.insNumber.touched" class="validation-error">
+                                <div *ngIf="form.insNumber.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El número INS es un campo obligatorio.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form">
+                            <label class="kcs-label">Título del estudio</label>
+                            <div class="control">
+                                <input type="text" class="form-control ng-pending" formControlName="trialTitle" placeholder="ex. Inv. contra la influenza">
+                            </div>
+                            <div *ngIf="form.trialTitle.invalid && form.trialTitle.touched" class="validation-error">
+                                <div *ngIf="form.trialTitle.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El título es un campo obligatorio.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form">
+                            <label class="kcs-label">Ciudad</label>
+                            <div class="control">
+                                <input type="text" class="form-control ng-pending" formControlName="location" placeholder="ex. Lima">
+                            </div>
+                            <div *ngIf="form.location.invalid && form.location.touched" class="validation-error">
+                                <div *ngIf="form.location.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >La ubicación es un campo obligatorio.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form">
+                            <label class="kcs-label">Agente origen</label>
+                            <div class="control">
+                                <input type="select" class="form-control ng-pending" formControlName="origin" placeholder="ex. Lima">
+                            </div>
+                            <div *ngIf="form.origin.invalid && form.origin.touched" class="validation-error">
+                                <div *ngIf="form.origin.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El agente origen es un campo obligatorio.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer custom-modal-footer no-border">
+                        <button id="createButton" type="submit" class="btn create-kcs-confirmation" [disabled]="createTrialForm.invalid" #submitCreateTrial>Guardar</button>
+                        <button type="button" class="btn cancel-create-kcs" data-dismiss="modal" (click)="cancelCreateTrial()">Cancelar</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

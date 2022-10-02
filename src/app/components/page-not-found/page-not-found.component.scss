@@ -1,0 +1,46 @@
+@import '../../../styles/mixins';
+
+.error-template {
+    margin-top: 20px;
+}
+
+
+.redirect-btn {
+    @include btn-regular-style($color: #FFFFFF, $backgroundColor: $blue-primary); 
+    font-weight: 700; 
+    width: 169px;
+    height: 40px;
+    border-style: 1px solid;
+    border-radius: 4px;
+    margin-top: 17px;
+}
+
+.error-message-box {
+    margin-top: 34px;
+    height: 78px;
+}
+
+.error-detail-box{
+    margin-top: 13px;
+    height: 27px;
+    
+    .error-details {
+        span {
+            display: block;
+            @include regular-font-style($fontSize: 16px, $color: $black-primary);
+            font-weight: 400; 
+        }
+    }
+}
+
+.error-actions {
+    margin-top: 20px;
+    margin-bottom: 38px;
+}
+
+.error-message-box h2{
+    margin:0;
+    padding:0;
+    @include regular-font-style($fontSize: 32px, $color: $black-primary);
+    font-weight: 700; 
+}
