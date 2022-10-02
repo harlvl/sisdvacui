@@ -12,7 +12,6 @@
                 <span class="modal-title">Crear nuevo estudio</span>
                 <form [formGroup]="createTrialForm" (ngSubmit)="submitCreateTrial.focus();onSubmit()" novalidate>
                     <div class="card-body">
-
                         <div class="form-group custom-form">
                             <label class="kcs-label">Número INS</label>
                             <div class="control">
@@ -26,10 +25,10 @@
                         <div class="form-group custom-form">
                             <label class="kcs-label">Título del estudio</label>
                             <div class="control">
-                                <input type="text" class="form-control ng-pending" formControlName="trialTitle" placeholder="ex. Inv. contra la influenza">
+                                <input type="text" class="form-control ng-pending" formControlName="title" placeholder="ex. Inv. contra la influenza">
                             </div>
-                            <div *ngIf="form.trialTitle.invalid && form.trialTitle.touched" class="validation-error">
-                                <div *ngIf="form.trialTitle.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El título es un campo obligatorio.</div>
+                            <div *ngIf="form.title.invalid && form.title.touched" class="validation-error">
+                                <div *ngIf="form.title.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El título es un campo obligatorio.</div>
                             </div>
                         </div>
 
@@ -45,11 +44,28 @@
 
                         <div class="form-group custom-form">
                             <label class="kcs-label">Agente origen</label>
-                            <div class="control">
-                                <input type="select" class="form-control ng-pending" formControlName="origin" placeholder="ex. Lima">
-                            </div>
+                            <select class="form-control select" formControlName="origin">
+                                <option value="">Seleccione</option>
+                                <option *ngFor="let originInfection of originInfectionsList" [value]="originInfection.origin">{{ originInfection.origin }}</option>
+                            </select>
                             <div *ngIf="form.origin.invalid && form.origin.touched" class="validation-error">
-                                <div *ngIf="form.origin.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El agente origen es un campo obligatorio.</div>
+                                <div *ngIf="form.origin.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El origen es un campo obligatorio.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group custom-form">
+                            <label class="kcs-label">Fecha de inicio</label>
+                            <input type="text"
+                                   placeholder="Datepicker"
+                                   class="form-control"
+                                   formControlName="startDate"
+                                   [bsConfig] = "datePickerConfig"
+                                   bsDatepicker
+                                   [bsValue]="today"
+                                   (bsValueChange)="onValueChange($event)"
+                                   [bsConfig]="{ isAnimated: true, dateInputFormat: 'YYYY-MM-DD' }">
+                            <div *ngIf="form.startDate.invalid && form.startDate.touched" class="validation-error">
+                                <div *ngIf="form.startDate.errors.required"><img src="./assets/images/icons/exclamation-solid.svg" alt="" >El origen es un campo obligatorio.</div>
                             </div>
                         </div>
 

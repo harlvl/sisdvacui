@@ -2,7 +2,7 @@ import {Component, Injectable, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NgxSpinnerService} from 'ngx-spinner';
 import { map } from 'rxjs/operators';
-import {Study} from '../../models/study';
+import {Trial} from '../../models/trial';
 import {TrialService} from '../../services/trial.service';
 
 @Component({
@@ -14,7 +14,7 @@ import {TrialService} from '../../services/trial.service';
 @Injectable({providedIn: 'root'})
 export class PreclinicalStudyComponent implements OnInit {
     @ViewChild('createTrialModalBtn', null) public createTrialModal;
-    public study: Study;
+    public study: Trial;
     public trials: any[];
     public trialsFirst: any;
 
@@ -23,7 +23,7 @@ export class PreclinicalStudyComponent implements OnInit {
         private SpinnerService: NgxSpinnerService,
         private route: ActivatedRoute,
         private router: Router) {
-        this.study = new Study('Investigación Contra Infección N', 'Preclínica');
+        this.study = new Trial('Investigación Contra Infección N', 'Preclínica');
     }
 
     public ngOnInit(): void {
